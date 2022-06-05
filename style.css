@@ -1,0 +1,278 @@
+/* css reset */
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, th, td { padding:0; margin:0;}
+table { border-collapse: collapse; border-spacing: 0; }
+fieldset, img { border: 0; }
+a { color:#000; text-decoration:none; }
+a:hover { color: ; }
+address, caption, cite, code, dfn, em, th, var { font-weight: normal; font-style: normal; }
+ol, ul { list-style: none; }
+h1, h2, h3, h4, h5, h6 { font-weight: normal; font-size: 100%; }
+q:before, q:after { content:""; }
+/* css base */
+body { font-family:"微软雅黑"; font-size:12px; color:#000; line-height:1.8;background: #fff;}
+.left{ float:left;}
+.right{ float:right;}
+.clearfix:after{  content: "."; display: block;height: 0;clear: both; visibility: hidden;}
+*{
+	margin: 0;
+	padding: 0;
+	
+}
+.wrap{
+	width: 1200px;
+	margin: 0 auto;
+
+	position: relative;
+	
+}
+.hearde{
+	background: #e6c8b7;
+}
+.logo{
+	float: left;
+	margin-top: 5px;
+}
+.nav{
+	float: right;
+	margin-top: 20px;
+}
+.nav ul li{
+	display: inline-block;
+	margin: 0 20px;
+	font-size: 14px;
+}
+.nav ul li a{
+	color: #FFFFFF;
+}
+.foot_input{
+	float: right;
+	padding-left: 30px;
+	margin-top: 18px;
+	color: #ababab;	
+}
+.foot_input dl dt{
+	margin-bottom: 8px;
+}
+.foot_input dl dd{
+	width: 120px;
+	height: 34px;
+	position: relative;
+}
+.foot_input input{
+	outline: none;
+	border: none;
+}
+.foot_input input.inp_1{
+	width: 120px;
+	height: 34px;
+	line-height: 54px;
+	background: #FFFFFF;
+	padding: 0 8px;
+	box-sizing: border-box;
+	color: #FFFFFF;
+	padding-right: 95px;
+	border-radius: 20px;
+}
+.foot_input input.inp_2{
+	position: absolute;
+	top: 8px;
+	left: 5px;
+	z-index: 50;
+	text-align: center;
+	cursor: pointer;
+	background: #ecd1b2;
+	color: #FFFFFF;
+}
+
+.banner{
+	text-align: center;
+}
+.banner img{
+	display: inline-block;
+}
+.list{
+	margin: 50px 0;
+}
+.list ul li{
+	display: inline-block;
+	width: 32%;
+	text-align: center;
+}
+.footer{
+	background: #e6c8b7;
+	overflow: hidden;
+	padding: 25px 0;
+}
+.foot_logo{
+	float: left;
+}
+.footer .foot_input input.inp_1{
+	background: none;
+	width: 270px;
+	height: 43px;
+	border-radius: 0;
+	border: 1px solid #FFFFFF;
+	color: #FFFFFF;
+}
+.footer .foot_input input.inp_1::-webkit-input-placeholder{
+	color: #FFFFFF;
+}
+.footer .foot_input dl dt{
+	color: #FFFFFF;
+	font-size: 14px;
+}
+.footer .foot_input dl dd{
+	width: 270px;
+	height: 43px;
+}
+.footer .foot_input input.inp_2{
+	width: 58px;
+	height: 43px;
+	left: auto;
+	right: 0px;
+	top: 0;
+	background: #FFFFFF;
+	color: #000000;
+}
+.foot_list{
+	float: right;
+	margin-top: 30px;
+	font-size: 14px;
+	color: #FFFFFF;
+	margin-right: 100px;
+}
+.time{
+	margin: 40px 0;
+}
+.time_le{
+	float: left;
+	width: 50%;
+}
+.time_ri{
+	width: 46%;
+	float: left;
+	margin-left: 4%;
+}
+.time_top{
+	text-align: center;
+}
+.time_top ul li{
+	display: inline-block;
+	background: #e6c8b7;
+	padding: 10px 15px;
+	font-size: 14px;
+	margin: 0 30px;
+	cursor: pointer;
+}
+.num_time{
+	background: #e6c8b7;
+	text-align: center;
+	padding: 40px 0;
+	margin: 25px 0;
+	font-size: 26px;
+	margin-bottom: 80px;
+}
+.time_bot{
+	
+}
+.time_bot ul li{
+	background: #e6c8b7;
+	font-size: 26px;
+	padding: 10px 0;
+	margin: 25px 0;
+	text-align: center;
+}
+.time_bot .time_top ul li{
+	font-size: 14px;
+	padding: 10px 15px;
+	margin: 0 30px;
+}
+.words{
+	
+}
+.words ul li i{
+	display: block;
+	float: left;
+}
+.words ul li{
+	margin-bottom: 15px;
+}
+.words ul li span{
+	display: block;
+	width: 70%;
+	float: left;
+	margin-left: 4%;
+	background: #e6c8b7;
+	height: 40px;
+	line-height: 40px;
+	font-size: 14px;
+	text-align: center;
+	margin-top: 25px;
+}
+.words_bg{
+	background: url(../img/16.jpg) no-repeat center top;
+	width: 613px;
+	height: 598px;
+	padding-top: 395px;
+
+}
+.words_bg ul li{
+
+	margin: 0 100px;
+	margin-right: 45px;
+	margin-left: 150px;
+	float: left;
+}
+.time_le2{
+	width: 50%;
+}
+.time_le img{
+	max-width: 100%;
+}
+.teax_team textarea{
+	display: block;
+	width: 100%;
+	height: 130px;
+	padding: 15px;
+	box-sizing: border-box;
+	border: 1px solid #000000;
+	box-shadow: 0 0  2px 1px #000000;
+}
+.teax_team input{
+	display: block;
+	background: #3c3c3c;
+	padding: 12px 15px;
+	color: #FFFFFF;
+	font-size: 14px;
+	border: none;
+	margin-left: auto;
+	margin-right: 0px;
+	margin-top: 15px;
+}
+.teax_team{
+	margin-bottom: 40px;
+}
+.teax2{
+	margin-top: 180px;
+}
+.teax2 textarea{
+	display: block;
+	width: 100%;
+	height: 180px;
+	padding: 15px;
+	box-sizing: border-box;
+	border: 1px solid #000000;
+	box-shadow: 0 0  2px 1px #000000;
+}
+.teax2 input{
+	display: block;
+	width: 60%;
+	height: 40px;
+	line-height: 40px;
+	background: #e6c8b7;
+	border: none;
+	margin: 25px auto;
+	font-size: 14px;
+	outline: none;
+	cursor: pointer;
+}
