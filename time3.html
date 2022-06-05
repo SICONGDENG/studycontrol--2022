@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+	</head>
+	<body  onload="startTime()">
+		
+		
+		<div class="hearde">
+			<div class="wrap clearfix">
+				<div class="logo">
+					<img src="img/logo.jpg"/>
+				</div>
+				
+				<div class="foot_input">
+		    			<dl>
+
+		    				<dd>
+		    				  <input type="text" name="" id="" value="" placeholder="请输入您的联系方式" class="inp_1"/>
+		    				  <input type="image" src="img/search.jpg" name="" id=""  class="inp_2"/>
+		    				</dd>
+		    			</dl>
+		    	</div>
+		    	
+		    	<div class="nav">
+					<ul>
+						<li><a href="index.html">HOME</a></li>
+						<li><a href="time3.html">PROJECT</a></li>
+						<li><a href="time4.html">CONTACT US</a></li>
+						<li><a href="time5.html">SIGN IN</a></li>
+					</ul>
+				</div>
+				
+			</div>
+		</div>
+		
+		<div class="time">
+			<div class="wrap clearfix">
+				<div class="time_le">
+					<img src="img/7.jpg"/>
+				</div>
+				<div class="time_ri">
+					<div class="time_top">
+						<ul>
+							<li>START</li>
+							<li>STOP</li>
+						</ul>
+					</div>
+					<div class="num_time">
+						<div id="txt"></div>
+					</div>
+					
+					<script>
+function startTime(){
+	var today=new Date();
+	var h=today.getHours();
+	var m=today.getMinutes();
+	var s=today.getSeconds();// 在小于10的数字前加一个‘0’
+	m=checkTime(m);
+	s=checkTime(s);
+	document.getElementById('txt').innerHTML=h+":"+m+":"+s;
+	t=setTimeout(function(){startTime()},500);
+}
+function checkTime(i){
+	if (i<10){
+		i="0" + i;
+	}
+	return i;
+}
+</script>
+					<script src="js/jquery.countdown.js"></script>
+<link href='css/jquery.countdown.css'  rel="stylesheet" type="text/css"/>
+
+					<div class="time_bot">
+						<ul>
+							<div class="time">
+		<ul>
+			<div class="num">
+				<li>
+					<span class="static old">0</span>
+				    <span class="static old">0</span>
+				</li>
+				
+			</div>
+			<div class="num">
+				<li>
+					<span class="static old">0</span>
+				    <span class="static old">0</span>
+				</li>
+				
+			</div>
+			<div class="num">
+				<li>
+					<span class="static old">0</span>
+				    <span class="static old">0</span>
+				</li>
+				
+			</div>
+			
+		</ul>
+	<div>
+
+							
+	<div class="setting">
+		<ul>
+			<li>Hour：<input type="text" name="" class="input hour" maxlength="2" value="00" /></li>
+			<li>
+				branch：<input type="text" name="" class="input minute" maxlength="2" value="00" />
+			</li>
+			<li>
+				second：<input type="text" name="" class="input second" maxlength="2" value="00" />
+			</li>
+			<li>
+				<a class="begin" onclick="Countdown.init()">START</a>
+			</li>
+		</ul>
+		<style type="text/css">
+			.setting input{
+				background: #e6c8b7;
+				height: 28px;
+			}
+		</style>
+		
+		
+		
+		
+	</div>
+	
+
+							<!--<li>
+								 <span id="box1"></span>
+  <span id="box2"></span>
+  <span id="box3"></span>
+
+							</li>
+							<li>
+								<span id="box4"></span>
+  <span id="box5"></span>
+  <span id="box6"></span>
+
+							</li>
+							<li>
+								<span id="box7"></span>
+  <span id="box8"></span>
+  <span id="box9"></span>
+
+							</li>-->
+						</ul>
+						<!--<div class="time_top">
+							<ul>
+								<li> <a class="begin" onclick="Countdown.init()">START</a></li>
+								<li>STOP</li>
+							</ul>
+						</div>-->
+					</div>
+					 <script src="js/countDown-master-es5.js"></script>
+  <script>
+    var box1 = document.getElementById('box1');
+    var box2 = document.getElementById('box2');
+    var box3 = document.getElementById('box3');
+    var box4 = document.getElementById('box4');
+    var box5 = document.getElementById('box5');
+    var box6 = document.getElementById('box6');
+    var box7 = document.getElementById('box7');
+    var box8 = document.getElementById('box8');
+    var box9 = document.getElementById('box9');
+    var box10 = document.getElementById('box10');
+    var box11 = document.getElementById('box11');
+    var box12 = document.getElementById('box12');
+    var box13 = document.getElementById('box13');
+    var box14 = document.getElementById('box14');
+    var box15 = document.getElementById('box15');
+    var box16 = document.getElementById('box16');
+
+    console.log(countDown().init());
+    console.log(countDown().init('10m33s')); //0天0时10分32秒
+    console.log(countDown().init([2017, 9, 20]));
+
+    console.log(countDown().init('55m', {
+      hh: box1,
+      min: box2,
+      ss: box3
+    }, function () {
+      alert(1)
+    })); //0天0时21分5秒
+    console.log(countDown().init([2017, 10, 1, 9, 21], {
+      hh: box4,
+      min: box5,
+      ss: box6
+    }));
+    console.log(countDown().init({
+      hh: box7,
+      min: box8,
+      ss: box9
+    }));
+    console.log(countDown().init({
+      yy: box10,
+      mo: box11,
+      dd: box12,
+      hh: box13,
+      min: box14,
+      ss: box15,
+      ww: box16
+    }));
+
+    setInterval(function () {
+      console.log(countDown().init())
+    }, 1000)
+  </script>
+
+
+				</div>
+			</div>
+		</div>
+		
+		<div class="time">
+			<div class="wrap clearfix">
+				<div class="time_le time_le2">
+					<img src="img/14.jpg"/>
+				</div>
+				<div class="time_ri">
+					<div class="words_bg">
+						<ul class="clearfix">
+							<li>
+								  <span id="box1"></span>
+  <span id="box2"></span>
+  <span id="box3"></span>
+							</li>
+							<li>
+								<span id="box7"></span>
+  <span id="box8"></span>
+  <span id="box9"></span>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script>
+function startTime(){
+	var today=new Date();
+	var h=today.getHours();
+	var m=today.getMinutes();
+	var s=today.getSeconds();// 在小于10的数字前加一个‘0’
+	m=checkTime(m);
+	s=checkTime(s);
+	document.getElementById('txt').innerHTML=h+":"+m+":"+s;
+	t=setTimeout(function(){startTime()},500);
+}
+function checkTime(i){
+	if (i<10){
+		i="0" + i;
+	}
+	return i;
+}
+</script>
+					
+		<script type="text/javascript" src="js/jquery.js" ></script>
+		<script src="js/countDown-master-es5.js"></script>
+  <script>
+    var box1 = document.getElementById('box1');
+    var box2 = document.getElementById('box2');
+    var box3 = document.getElementById('box3');
+    var box4 = document.getElementById('box4');
+    var box5 = document.getElementById('box5');
+    var box6 = document.getElementById('box6');
+    var box7 = document.getElementById('box7');
+    var box8 = document.getElementById('box8');
+    var box9 = document.getElementById('box9');
+    var box10 = document.getElementById('box10');
+    var box11 = document.getElementById('box11');
+    var box12 = document.getElementById('box12');
+    var box13 = document.getElementById('box13');
+    var box14 = document.getElementById('box14');
+    var box15 = document.getElementById('box15');
+    var box16 = document.getElementById('box16');
+
+    console.log(countDown().init());
+    console.log(countDown().init('10m33s')); //0天0时10分32秒
+    console.log(countDown().init([2017, 9, 20]));
+
+    console.log(countDown().init('55m', {
+      hh: box1,
+      min: box2,
+      ss: box3
+    }, function () {
+      alert(1)
+    })); //0天0时21分5秒
+    console.log(countDown().init([2017, 10, 1, 9, 21], {
+      hh: box4,
+      min: box5,
+      ss: box6
+    }));
+    console.log(countDown().init({
+      hh: box7,
+      min: box8,
+      ss: box9
+    }));
+    console.log(countDown().init({
+      yy: box10,
+      mo: box11,
+      dd: box12,
+      hh: box13,
+      min: box14,
+      ss: box15,
+      ww: box16
+    }));
+
+    setInterval(function () {
+      console.log(countDown().init())
+    }, 1000)
+  </script>
+		
+		
+		<div class="footer">
+			<div class="wrap clearfix">
+				<div class="foot_logo">
+					<img src="img/foot_logo.jpg"/>
+				</div>
+				<div class="foot_input">
+	    			<dl>
+	    				<dt>fasdkjhfkjasdhfkhajkfhjkadshfjk</dt>
+	    				<dd>
+	    				  <input type="text" name="" id="" value="" placeholder="Email Address" class="inp_1"/>
+	    				  <input type="submit" name="" id="" value="OK" class="inp_2"/>
+	    				</dd>
+	    			</dl>
+		    	</div>
+		    	<div class="foot_list">
+		    		<ul>
+		    			<li><img src="img/4.jpg"/>Facebook</li>
+		    			<li><img src="img/5.jpg"/>Titter</li>
+		    			<li><img src="img/6.jpg"/>Instagram</li>
+		    		</ul>
+		    	</div>
+			</div>
+		</div>
+		
+	</body>
+</html>
